@@ -9,19 +9,19 @@ Feature: A description
     #Used workaround for this test
     #Checking that all quotes tagged with giraffe return 2 results
   @List
-  Scenario: Assert filter parameter works correctly
+  Scenario: Assert filters containing parameter works correctly
     Then all quotes returned contain "giraffe" are listed as 2
 
     #Used workaround for this test
     #Checking that all quotes tagged with the tag job return 2 results
   @List
-  Scenario: Assert filter parameter works correctly
+  Scenario: Assert filter tags works correctly
     Then all quotes with the "job" "tag" are listed as 2
 
     #Check when adding 2 quotes the correct amount of quotes are returned
     #Then checking a quote is removed after unfave quote
   @List
-  Scenario: Assert filter parameter works correctly
+  Scenario: Get the public quotes favorited by user 'Fearghal'
     When favourite quote "25569"
     And favourite quote "25568"
     Then all quotes with the "Fearghal" "user" are listed as 2
