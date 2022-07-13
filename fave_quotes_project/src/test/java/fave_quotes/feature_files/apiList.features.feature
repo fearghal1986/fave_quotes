@@ -5,12 +5,14 @@ Feature: A description
   @List
   Scenario: Assert 25 quotes are returned from quotes endpoint
     Then number of quotes equals 25
-
+    
+    #Used workaround for this test
     #Checking that all quotes tagged with giraffe return 2 results
   @List
   Scenario: Assert filter parameter works correctly
     Then all quotes returned contain "giraffe" are listed as 2
 
+    #Used workaround for this test
     #Checking that all quotes tagged with the tag job return 2 results
   @List
   Scenario: Assert filter parameter works correctly
